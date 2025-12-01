@@ -1,0 +1,7 @@
+.venv/
+stm32_h755_zephyr/.west/
+stm32_h755_zephyr/build/
+stm32_h755_zephyr/modules/
+stm32_h755_zephyr/zephyr/
+stm32_h755_zephyr/bootloader/
+stm32_h755_zephyr/tools/
