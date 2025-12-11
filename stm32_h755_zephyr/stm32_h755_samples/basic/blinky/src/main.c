@@ -24,12 +24,20 @@ int main(void)
 {
 	int ret;
 	bool led_state = true;
+	bool led1_state = true;
+	uint32_t counter = 0;
+	const struct gpio_dt_spec led1 = GPIO_DT_SPEC_GET(DT_ALIAS(led1), gpios);
 
-	if (!gpio_is_ready_dt(&led)) {
+	if (!gpio_is_ready_dt(&led) || !gpio_is_ready_dt(&led1)) {
 		return 0;
 	}
 
 	ret = gpio_pin_configure_dt(&led, GPIO_OUTPUT_ACTIVE);
+	if (ret < 0) {
+		return 0;
+	}
+
+	ret = gpio_pin_configure_dt(&led1, GPIO_OUTPUT_ACTIVE);
 	if (ret < 0) {
 		return 0;
 	}
@@ -41,7 +49,19 @@ int main(void)
 		}
 
 		led_state = !led_state;
-		printf("LED state: %s\n", led_state ? "ON" : "OFF");
+		printf("LED0 state: %s\n", led_state ? "ON" : "OFF");
+
+		counter++;
+		counter %= 5;
+		if (counter == 0) {
+			ret = gpio_pin_toggle_dt(&led1);
+			if (ret < 0) {
+				return 0;
+			}
+			led1_state = !led1_state;
+			printf("LED1 state: %s\n", led1_state ? "ON" : "OFF");
+		}
+
 		k_msleep(SLEEP_TIME_MS);
 	}
 	return 0;
