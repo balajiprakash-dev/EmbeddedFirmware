@@ -1,0 +1,68 @@
+*** Booting Zephyr OS build v4.3.0-1368-gd02cdc734e6e ***
+PWM-based blinky
+Calibrating for channel 3...
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 239760
+pulse cycles : 119880
+calling pwm_set_cycles
+[00:00:00.020,000] <err> pwm_stm32: Cannot set PWM output, value exceeds 16-bit timer limit.
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 119880
+pulse cycles : 59940
+calling pwm_set_cycles
+[00:00:00.041,000] <err> pwm_stm32: Cannot set PWM output, value exceeds 16-bit timer limit.
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 59940
+pulse cycles : 29970
+calling pwm_set_cycles
+Done calibrating; maximum/minimum periods 250000000/7812500 nsec
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 59940
+pulse cycles : 29970
+calling pwm_set_cycles
+Using period 250000000
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 29970
+pulse cycles : 14985
+calling pwm_set_cycles
+Using period 125000000
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 14985
+pulse cycles : 7492
+calling pwm_set_cycles
+Using period 62500000
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 7492
+pulse cycles : 3746
+calling pwm_set_cycles
+Using period 31250000
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 3746
+pulse cycles : 1873
+calling pwm_set_cycles
+Using period 15625000
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 1873
+pulse cycles : 936
+calling pwm_set_cycles
+Using period 7812500
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 3746
+pulse cycles : 1873
+calling pwm_set_cycles
+Using period 15625000
+tim_clk: 240000000 prescaler: 1000
+cycles per sec : 239760
+period cycles : 7492
+pulse cycles : 3746
+calling pwm_set_cycles
